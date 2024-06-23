@@ -1,0 +1,24 @@
+{
+  "name": "profolio-dev",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/onest": "^5.0.4",
+    "@fontsource/barlow": "^5.0.13",
+    "@fontsource/nothing-you-could-do": "^5.0.19",
+    "@fontsource/qwitcher-grypen": "^5.0.20",
+    "@fontsource/smooch": "^5.0.20",
+    "astro": "^4.9.3",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
+  }
+}

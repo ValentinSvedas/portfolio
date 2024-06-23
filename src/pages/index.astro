@@ -1,0 +1,79 @@
+---
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/Layout.astro";
+import myImage from "../../src/fotoportada.png";
+import "@fontsource/qwitcher-grypen";
+import Pill from "../components/Pill.astro";
+import Linkedin from "../Icons/Linkedin.astro";
+---
+
+<Layout
+	title="Porfolio de Valentin Svedas +2 de dos años de desarollo web, especializado en creación de apis con java"
+	description="porfolio sobre valentin svedas desarrollador y programador web full-stack"
+>
+	<main>
+		<section class="mx-auto h-dvh">
+			<div class="mt-20 flex max-lg:flex-col">
+				<div
+					class="flex flex-col items-center max-h-[40rem] w-full place-content-center pt-40 text-white"
+				>
+					<h1>
+						<div class="text-3xl text-center font-bold">
+							{">"} Hey! 👋 I'm
+						</div>
+						<div class="text-6xl pt-3">Valentín Svedas</div>
+					</h1>
+					<p
+						class="px-24 text-lg text-wrap text-center max-w-3xl pt-3"
+					>
+						Full-stack developer with 2 years of experience from
+						Tandil, Buenos Aires, Argentina 🇦🇷. Specialized in
+						developing APIs using Java with Spring Boot.
+					</p>
+					<nav class="flex flex-wrap gap-4 mt-6">
+						<Pill
+							href="mailto:valetinsvedas@gmail.com"
+							className="bg-black hover:bg-white hover:text-black"
+						>
+							Let`s work together
+						</Pill>
+						<Pill
+							href="/"
+							className="bg-white text-black hover:bg-black hover:text-white"
+						>
+							My work
+						</Pill>
+					</nav>
+				</div>
+				<div
+					class="bg-slate-600 relative overflow-hidden rounded-bl-xl rounded-tl-xl shadow-slate-800 shadow-md min-h-96 max-h-80 mt-36 w-full"
+				>
+					<p
+						class="qwitcher-grypen absolute text-white bottom-2 -left-4"
+					>
+						Svedas porfolio
+					</p>
+					<Image
+						src={myImage}
+						alt="valen frontal"
+						class="absolute transform scale-x-[-1] min-w-fit"
+					/>
+				</div>
+			</div>
+			<div class="flex justify-start">
+				<Pill href="/">
+					<Linkedin class="size-6" />
+				</Pill>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.qwitcher-grypen {
+		font-family: "Qwitcher Grypen", cursive;
+		font-size: 25rem;
+		text-wrap: nowrap;
+		rotate: -8deg;
+	}
+</style>

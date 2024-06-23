@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import '@fontsource/nothing-you-could-do';
+import '@fontsource/barlow';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { description,title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="absolute inset-0 -z-10 h-full w-full bg-radial-gradient"></div>
+			<Header/>
+			<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+	}
+	html {
+		font-family: 'Barlow', system-ui, sans-serif;
+	}
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	.bg-radial-gradient {
+    background: linear-gradient(0deg, #D27F33 0%, #484848 100%);
+}
+
+</style>

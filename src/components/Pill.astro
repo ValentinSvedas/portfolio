@@ -1,0 +1,17 @@
+---
+type PillProps = {
+  className?: string
+}
+
+const { className } = Astro.props;
+---
+
+<a
+    class={`rounded-2xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 ${className} text-xl font-bold `}
+    {...Astro.props}
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <slot/>
+</a> 
