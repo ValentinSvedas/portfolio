@@ -5,6 +5,11 @@ import myImage from "../../src/fotoportada.png";
 import "@fontsource/qwitcher-grypen";
 import Pill from "../components/Pill.astro";
 import Linkedin from "../Icons/Linkedin.astro";
+import Github from "../Icons/Github.astro";
+import Instagram from "../Icons/Instagram.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout
@@ -12,67 +17,126 @@ import Linkedin from "../Icons/Linkedin.astro";
 	description="porfolio sobre valentin svedas desarrollador y programador web full-stack"
 >
 	<main>
-		<section class="mx-auto h-dvh">
-			<div class="mt-20 flex max-lg:flex-col">
-				<div
-					class="flex flex-col items-center max-h-[40rem] w-full place-content-center pt-40 text-white"
+		<section class="mx-auto flex flex-col justify-between h-dvh">
+			<div class="flex max-lg:flex-col">
+				<article
+					class="flex flex-col items-center max-h-[40rem] w-full place-content-center pt-20 lg:pt-40 text-white"
 				>
 					<h1>
-						<div class="text-3xl text-center font-bold">
+						<div class="lg:text-3xl text-xl text-center font-bold">
 							{">"} Hey! 👋 I'm
 						</div>
-						<div class="text-6xl pt-3">Valentín Svedas</div>
+						<div class="lg:text-6xl text-3xl text-center pt-3">
+							Valentín Svedas
+						</div>
 					</h1>
-					<p
-						class="px-24 text-lg text-wrap text-center max-w-3xl pt-3"
-					>
+					<p class="lg:px-24 px-2 text-lg text-center max-w-3xl pt-3">
 						Full-stack developer with 2 years of experience from
 						Tandil, Buenos Aires, Argentina 🇦🇷. Specialized in
-						developing APIs using Java with Spring Boot.
+						developing APIs using <span
+							class="text-slate-800 font-bold"
+							>Java with Spring Boot</span
+						>.
 					</p>
 					<nav class="flex flex-wrap gap-4 mt-6">
 						<Pill
 							href="mailto:valetinsvedas@gmail.com"
-							className="bg-black hover:bg-white hover:text-black"
+							className="bg-black/80 hover:bg-white hover:text-black"
 						>
 							Let`s work together
 						</Pill>
 						<Pill
 							href="/"
-							className="bg-white text-black hover:bg-black hover:text-white"
+							className="bg-white/80 text-black hover:bg-black hover:text-white"
 						>
 							My work
 						</Pill>
 					</nav>
-				</div>
-				<div
-					class="bg-slate-600 relative overflow-hidden rounded-bl-xl rounded-tl-xl shadow-slate-800 shadow-md min-h-96 max-h-80 mt-36 w-full"
+				</article>
+				<aside
+					class="bg-slate-600 relative overflow-hidden lg:rounded-bl-xl lg:rounded-tl-xl
+							shadow-slate-800 shadow-md min-h-96 max-h-80 mt-5 lg:mt-36 w-full
+							max-md:rounded-full max-md:min-h-52 max-md:max-w-52 max-md:mx-auto"
 				>
 					<p
-						class="qwitcher-grypen absolute text-white bottom-2 -left-4"
+						class="qwitcher-grypen absolute text-white md:bottom-2 md:-left-4 -left-1/4 max-md:text-sm"
 					>
 						Svedas porfolio
 					</p>
 					<Image
+						loading={"eager"}
 						src={myImage}
 						alt="valen frontal"
-						class="absolute transform scale-x-[-1] min-w-fit"
+						class="absolute transform scale-x-[-1] lg lg:min-w-fit size-fit xl my-14"
 					/>
-				</div>
+				</aside>
 			</div>
-			<div class="flex justify-start">
-				<Pill href="/">
-					<Linkedin class="size-6" />
+			<aside
+				class="flex max-md:flex-col mb-8 gap-3 max-md:my-auto min-h-fit max-lg:mx-auto lg:ml-5 w-fit"
+			>
+				<Pill
+					href="https://www.linkedin.com/in/valentin-svedas/"
+					className="bg-black/40 rounded-md hover:bg-black cursor-pointer max-h-8"
+				>
+					<Linkedin class="size-5 fill-white" />
+					<p class="text-white text-md">Linkedin</p>
 				</Pill>
-			</div>
+				<Pill
+					href="https://github.com/ValentinSvedas"
+					className="bg-black/40 rounded-md 3 hover:bg-black  cursor-pointer max-h-8"
+				>
+					<Github class="size-6 fill-white" />
+					<p class="text-white text-md">Github</p>
+				</Pill>
+				<Pill
+					href="https://www.linkedin.com/in/valentin-svedas/"
+					className="bg-black/40 rounded-md  hover:bg-black  cursor-pointer max-h-8"
+				>
+					<Instagram class="size-6 fill-white" />
+					<p class="text-white text-md">Instagram</p>
+				</Pill>
+				<p class="text-2xl max-lg:hidden">|</p>
+				<Pill
+					href="/src/documents/cv-valentin-svedas.pdf"
+					download="CV Valentin Svedas"
+					className="bg-black/40 rounded-md  hover:bg-black  cursor-pointer max-h-8"
+				>
+					<p class="text-white text-md">Descargar CV</p>
+				</Pill>
+			</aside>
+			
 		</section>
+		<SectionContainer id="experience" class="my-20">
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white ">
+				Work experience
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="about-me">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+			>
+			  About me
+			</h2>
+			<AboutMe />
+		  </SectionContainer>
 	</main>
 </Layout>
 
 <style>
+	@media (min-width: 768px) {
+		.qwitcher-grypen {
+			font-size: 25rem;
+		}
+	}
+	@media (max-width: 768px) {
+		.qwitcher-grypen {
+			font-size: 15rem;
+		}
+	}
 	.qwitcher-grypen {
 		font-family: "Qwitcher Grypen", cursive;
-		font-size: 25rem;
+
 		text-wrap: nowrap;
 		rotate: -8deg;
 	}

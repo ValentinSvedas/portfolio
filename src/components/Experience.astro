@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+    {
+        date: "2024 - Actualidad",
+        title: "Full-Stack Developer",
+        company: "Lamansys",
+        description:
+            "Since 2021, I have worked at Lamansys. I joined as a Backend Developer and eventually became a Full Stack Developer, as I was assigned front-end tasks using React. First, I worked on the Conectar Igualdad project. This was a digital platform to track the validation and delivery of computers. It also tracked lost or stolen computers. The platform included classroom management and managing teachers, principals, and students. Recently, I moved to the Addons project. This is a health system that comes from Soma. In this role, I manage all the billing for patients, whether they come for emergencies, hospital stays, or outpatient services. The system records each patient's use of medication, procedures, and more. I have also learned to manage database interactions with Liquibase, use JWT for security with Spring Boot, handle file storage, and manage tokens.",
+    },
+];
+---
+
+<ol class="relative mt-16">
+    {
+        EXPERIENCIE.map((experiencie) => (
+            <li class="">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }
+</ol>
