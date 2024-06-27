@@ -18,7 +18,7 @@ import Experience from "../components/Experience.astro";
 >
 	<main>
 		<section class="mx-auto flex flex-col justify-between h-dvh">
-			<div class="flex max-lg:flex-col">
+			<div class="flex max-lg:flex-col h-full w-full mx-auto my-auto">
 				<article
 					class="flex flex-col items-center max-h-[40rem] w-full place-content-center pt-20 lg:pt-40 text-white"
 				>
@@ -56,8 +56,8 @@ import Experience from "../components/Experience.astro";
 				</article>
 				<aside
 					class="bg-slate-600 relative overflow-hidden lg:rounded-bl-xl lg:rounded-tl-xl
-							shadow-slate-800 shadow-md min-h-96 max-h-80 mt-5 lg:mt-36 w-full
-							max-md:rounded-full max-md:min-h-52 max-md:max-w-52 max-md:mx-auto"
+							shadow-slate-800 shadow-md min-h-96 max-h-80 my-auto lg:mt-36 w-full
+							max-md:rounded-full max-md:min-h-52 max-md:max-w-52 max-md:mx-auto "
 				>
 					<p
 						class="qwitcher-grypen absolute text-white md:bottom-2 md:-left-4 -left-1/4 max-md:text-sm"
@@ -73,7 +73,7 @@ import Experience from "../components/Experience.astro";
 				</aside>
 			</div>
 			<aside
-				class="flex max-md:flex-col mb-8 gap-3 max-md:my-auto min-h-fit max-lg:mx-auto lg:ml-5 w-fit"
+				class="flex max-md:flex-wrap  max-md:max-w-sm mb-8 gap-3 max-md:my-auto min-h-fit max-lg:mx-auto lg:ml-5 w-fit justify-center"
 			>
 				<Pill
 					href="https://www.linkedin.com/in/valentin-svedas/"
@@ -84,7 +84,7 @@ import Experience from "../components/Experience.astro";
 				</Pill>
 				<Pill
 					href="https://github.com/ValentinSvedas"
-					className="bg-black/40 rounded-md 3 hover:bg-black  cursor-pointer max-h-8"
+					className="bg-black/40 rounded-md 3 hover:bg-black cursor-pointer max-h-8"
 				>
 					<Github class="size-6 fill-white" />
 					<p class="text-white text-md">Github</p>
@@ -102,7 +102,7 @@ import Experience from "../components/Experience.astro";
 					download="CV Valentin Svedas"
 					className="bg-black/40 rounded-md  hover:bg-black  cursor-pointer max-h-8"
 				>
-					<p class="text-white text-md">Descargar CV</p>
+					<p class="text-white text-md text-nowrap">Descargar CV</p>
 				</Pill>
 			</aside>
 			
